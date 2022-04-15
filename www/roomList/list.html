@@ -1,0 +1,24 @@
+<ons-page ng-controller="list">
+    <ons-toolbar fixed-style>
+        <div class="left">
+            <ons-toolbar-button ng-click="app.slidingMenu.toggleMenu()"><ons-icon icon="bars"></ons-icon></ons-toolbar-button>
+        </div>
+        <div class="center">
+            部屋一覧
+        </div>
+        <div class="right">
+            <span ng-click="myNavigator.pushPage('roomCreate/create.html')" class="toolbar-button--outline navigation-bar__line-height">
+                作成
+            </span>
+        </div>
+    </ons-toolbar>
+    <ons-list>
+        <ons-list-item modifier="tappable" ng-repeat="item in someObject track by $index" ng-click="goChat(item.UserGroup.group_id,item.Group.group_name, item.Group.limit_time)">
+            {{item.Group.group_name}} 
+            <span id="sendName">{{item.Group.limit_time}}までだよ</span>
+            <span class="roomDeleteButton">
+                <ons-button ng-click="deleteChat(item.UserGroup.group_id);$event.stopPropagation();">削除</ons-button>
+            </span>
+        </ons-list-item>
+    </ons-list>
+</ons-page>

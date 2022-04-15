@@ -1,0 +1,56 @@
+<ons-page ng-controller="chat">
+    <ons-toolbar fixed-style>
+        <div class="left"><ons-back-button>戻る</ons-back-button></div>
+        <div class="center">
+            <ons-button ng-click="showSubBar()" modifier="quiet">
+                {{chatName}}<ons-icon icon="ion-chevron-down"></ons-icon>
+            </ons-button>
+        </div>
+        <div class="right">
+            <ons-button ng-click="myModal.show()" modifier="outline">
+                招待
+            </ons-button>
+        </div>
+    </ons-toolbar>
+    <div class="subBar" ng-controller="joinUsers">
+        <ons-icon icon="ion-loading-c" spin="true"></ons-icon>
+        <p>現在この部屋に参加しているユーザです。</p>
+        <ons-list>
+            <ons-list-item ng-repeat="item in prefs" ng-click="oneOnOne(item.UserGroup.user_id, item.User.user_name)">
+            {{item.User.user_name}}
+            </ons-list-item>
+        </ons-list>
+    </div>
+
+    <div id="messageFiled">
+        <div ng-repeat="message in messages">
+            <div id="message">
+                <div id="sendName">{{message.from}} > {{message.sendtime}}</div>
+                <div id="sendMessage">{{message.content}}</div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="footInput">
+        <form id="footForm" ng-submit="addMessage(message)">
+            <div id="messageBoxCell">
+            <TEXTAREA id="messageBox"  ng-model="message"
+                placeholder="メッセージを入力.."></TEXTAREA>
+            </div>
+            <div id="ButtonCell">
+            <button id="sendButton">
+                <ons-icon icon="ion-paper-airplane" size="20px" fixed-width="true"></ons-icon>
+            </button>
+            </div>
+        </form>
+    </div>
+
+    <ons-modal var="myModal" ng-controller="invite">
+        <ons-icon icon="ion-loading-c" spin="true"></ons-icon>
+        <p>この部屋に招待したい人に以下の招待コードを通知してください。</p>
+        <div id="inviteInputText"><input type="text" value="{{invitationCode}}" ></div>
+        <ons-button modifier="dark" onclick="myModal.hide()">閉じる</ons-button>
+    </ons-modal>
+
+</ons-page>

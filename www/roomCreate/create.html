@@ -1,0 +1,40 @@
+<ons-page ng-controller="base">
+    <ons-toolbar fixed-style>
+        <div class="left">
+            <ons-back-button>戻る</ons-back-button>
+        </div>
+        <div class="center">部屋作成</div>
+    </ons-toolbar>
+
+    <form>
+        <h3>部屋名</h3>
+        <input type="text" class="text-input--underbar" ng-model="room.name" maxlength="10" placeholder="部屋の名前を入力..." >
+        <br>
+        <h3>部屋の期限</h3>
+        <div ng-init="room.limit='d3'"></div>
+        <ons-list-item modifier="tappable">
+          <label class="radio-button radio-button--list-item">
+            <input type="radio" ng-model="room.limit" value="d3">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div>
+            3日
+          </label>
+        </ons-list-item>
+        <ons-list-item modifier="tappable">
+          <label class="radio-button radio-button--list-item">
+            <input type="radio" ng-model="room.limit" value="w1">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div>
+            1週間
+          </label>
+        </ons-list-item>
+        <ons-list-item modifier="tappable">
+          <label class="radio-button radio-button--list-item">
+            <input type="radio" ng-model="room.limit" value="m1">
+            <div class="radio-button__checkmark radio-button--list-item__checkmark"></div>
+            1カ月
+          </label>
+        </ons-list-item>
+        <ons-button id="createBtn" modifier="large" ng-click="insert()">
+            作成
+        </ons-button>
+    </form>
+</ons-page>

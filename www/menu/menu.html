@@ -1,0 +1,26 @@
+<ons-page ng-controller="main">
+    <ons-list>
+        <ons-list-item id="list_header">
+            <span >{{username}}</span>
+        </ons-list-item>
+
+        <ons-list-item
+            modifier="tappable" class="list__item__line-height"
+            onclick="app.slidingMenu.setMainPage('menu/settings.html', {closeMenu: true})">
+            <i class="fa fa-gear fa-lg" style="color: #666"></i>
+            &nbsp; 名前編集
+        </ons-list-item>
+        <ons-list-item
+            modifier="tappable" class="list__item__line-height"
+            onclick="app.slidingMenu.setMainPage('menu/joinRoom.html', {closeMenu: true})">
+            <i class="fa fa-gear fa-lg" style="color: #666"></i>
+            &nbsp; 招待コード入力
+        </ons-list-item>
+        <ons-list-item
+            modifier="tappable" class="list__item__line-height"
+            onclick="app.slidingMenu.setMainPage('menu/terms.html', {closeMenu: true})">
+            <i class="fa fa-gear fa-lg" style="color: #666"></i>
+            &nbsp; 利用規約
+        </ons-list-item>
+    </ons-list>
+</ons-page>

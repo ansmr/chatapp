@@ -1,0 +1,11 @@
+<ons-page ng-controller="nameEdit">
+    <ons-toolbar fixed-style>
+        <div class="left"><ons-button modifier="quiet" onclick="app.slidingMenu.setMainPage('roomList/list.html', {closeMenu: true})">戻る</ons-button></div>
+        <div class="center">名前編集</div>
+    </ons-toolbar>
+    <form>
+    <input type="text" class="text-input--underbar" id="edit_name_text" placeholder="ユーザー名" ng-model="user.name" value="{{user.name}}">
+    <br><br>
+    <ons-button modifier="light" class="add-button" ng-click="upd()">変更</ons-button>
+    </form>
+</ons-page>

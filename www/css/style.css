@@ -1,0 +1,185 @@
+h3 {
+    position: relative;
+	padding: .25em 0 .25em .25em;
+	border-left: 10px solid #eb482f;
+}
+h3::after {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	content: '';
+	width: 100%;
+	height: 0;
+	border-bottom: 1px solid #ccc;
+}
+#center02 {
+    position: relative; /* 絶対配置の基準点 */
+    width: 100%; /* 600px以下は幅いっぱいに広げる */
+	max-width: 600px; /* 最大幅の指定 */
+	height: 300px; /* 高さの指定 */
+	margin: 0 auto; /* ブロック要素の中央揃え */
+	text-align: center; /* インライン要素の中央揃え */
+	background: #fff; /* 背景色 */
+}
+
+#center02 .inner {
+	position: absolute; /* 絶対配置 */
+	top: 50%; /* 上から半分 */
+	left: 50%; /* 左から半分 */
+	width: 100%; /* 大枠と同じ幅に */
+	margin: -1.5em 0 0 -50%; /* 要素の大きさの半分引く */
+}
+
+#list_header {
+	background-color: #e74d4f;
+	color: #eee;
+}
+
+input[type="text"] {
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	outline: none;
+}
+
+input[type="button"],input[type="submit"] {
+	-webkit-appearance: none;
+	border-radius: 0;
+}
+
+.edit-name-form {
+	text-align: center;
+	width: 80%;
+	margin: 60px auto 0;
+}
+
+#left {
+	color: #e74d4f;
+}
+
+#title {
+	background-color: #C0504D;
+}
+
+form {
+	text-align: center;
+	width: 80%;
+	margin: 60px auto 0;
+}
+
+#input-user_name-text {
+	display: block;
+	margin: 8px auto 0 auto;
+	font-size: 14px;
+}
+
+.err_msg {
+	color: #eb482f;
+}
+
+.font-white {
+	color: #eee;
+}
+
+#messageFiled {
+	width: 100%;
+    height: 70%;
+    height: -webkit-calc(100% - 150px) ;
+	height: calc(100% - 150px) ;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+	padding-bottom: 150px;
+}
+
+#message {
+	overflow: hidden;
+	border-bottom: 1px solid #d2d2d2;
+    padding:10px;
+}
+
+#sendImage {
+	float: left;
+	width: 15%;
+}
+
+#sendImage img {
+	width: 40px;
+}
+
+#sendName {
+	font-size: .8125rem;
+	color: #b3aba9;
+}
+
+#sendMessage {
+	font-size: 1rem;
+	color: #333;
+}
+
+.clear {
+	clear: both;
+}
+
+#footInput {
+    position: fixed;
+	background-color: #fff;
+    display: table;
+	bottom: 0;
+	left: 0;
+}
+#footForm {
+	display: table-row;
+    width: 100%;
+}
+
+#messageBoxCell {
+    display: table-cell;
+    width: 100%;
+    vertical-align: bottom;
+}
+#messageBox {
+    overflow: auto;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    resize: none;
+    vertical-align: top;
+}
+
+#ButtonCell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#sendButton {
+	width: 100%;
+	color: #fff;
+	border: 0px solid currentColor;
+    height: 50px;
+    padding: 15px;
+    overflow: auto;
+    background-color: #eb482f;
+    border-radius: 8px;
+}
+
+#createBtn {
+    width: 100%;
+	color: #fff;
+	border: 0px solid currentColor;
+    height: 50px;
+    padding: 7px;
+    position: relative;
+    top:50px;
+    background-color: #eb482f;
+}
+#inviteInputText input{
+    font-size:100%;
+    text-align: center;
+    width: 50%;
+}
+
+.roomDeleteButton {
+    float:right;
+    vertical-align: middle;
+}
